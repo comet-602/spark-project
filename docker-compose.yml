@@ -1,0 +1,11 @@
+version: "3"
+services:
+  jupyter:
+    image: arthurtibame/spark-livy:v1    
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./work:/home/jovyan/work
+    environment:
+      - SPARKMAGIC_CONFIG_CREDENTIALS_URL=http://10.120.26.200:8998
+      
